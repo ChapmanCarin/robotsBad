@@ -12,7 +12,7 @@ const goGetRobots = () => {
 // TODO - your code here!
 };
 
-const insertRobot = (robot) => new Promise((resolve, reject) => {
+const insertRobot = () => {
   // TODO - your code here!
 });
 
