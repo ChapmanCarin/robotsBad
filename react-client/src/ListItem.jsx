@@ -1,10 +1,11 @@
 import React from 'react';
 
 
-const ListItem = ({ robot }) => (
+const ListItem = () => (
   <div>
-    <p>name of robot:<b>{robot[0]}</b></p>
-    <p>how it will kill you:<b>{robot[1]}</b></p>
+    {/* TO-DO: dynamically render all the robots on the page */}
+      <p>name of robot:</p>
+      <p>how it will kill you:</p>
   </div>
 );
 

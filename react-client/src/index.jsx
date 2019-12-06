@@ -12,23 +12,15 @@ class App extends React.Component {
       model: '',
       description: '',
     }
-    this.handleClickGet = this.handleClickGet.bind(this);
-    this.handleClickMake = this.handleClickMake.bind(this);
   }
 
   handleClickGet(){
-    axios.get('/robots')
-    .then((robots) => 
-    this.setState({
-      robots: robots.data,
-    }))
+    // TO-DO: make a GET request that will get all robots from the backend
+    
   }
 
   handleClickMake(){
-    axios.post('/makeRobot', {
-      model: this.state.model,
-      description: this.state.description,
-    })
+    //TO-DO: make a POST request that will send the user's supplied robot to the backend
   }
 
   render() {
@@ -40,15 +32,15 @@ class App extends React.Component {
         </p>
       </header>
       <p>below, enter the name of one of the robots that will kill us all</p>
-      <input type="text" value={this.state.model} onChange={e => this.setState({ model: e.target.value })} />
+      <input type="text" onChange={e => this.setState({ model: e.target.value })} />
       <p>below, tell me how will it kill us</p>
-      <input type="text" value={this.state.description} onChange={e => this.setState({ description: e.target.value })} />
+      <input type="text" onChange={e => this.setState({ description: e.target.value })} />
       <br></br>
-      <button onClick={this.handleClickMake} type="button">Please, by all means, click here to add your robot. Which will help bring on the apocalypse</button>
+      {/* TO-DO: add a button that when clicked will add a user's robot to the database using the function <handleClickMake> */}
       <br></br>
-      <button onClick={this.handleClickGet} type="button"> Click to see the robots that will murder you</button>
+      {/* TO-DO: add a button that when clicked will fetch all robots from the database and display them on the page using the function <handleClickGet>*/}
       <div>
-        <List robots={this.state.robots} />
+        {/* TO-DO: pass <robots> to the <List> component */}
       </div>
     </div>
   );
@@ -56,4 +48,4 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
-// export default App;
+
