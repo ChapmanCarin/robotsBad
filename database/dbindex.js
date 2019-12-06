@@ -14,7 +14,7 @@ const goGetRobots = () => {
 
 const insertRobot = () => {
   // TODO - your code here!
-});
+};
 
 
 module.exports = {
